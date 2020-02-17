@@ -1,0 +1,10 @@
+{:builds
+ {:app {:asset-path "/js"
+        :modules {:main {:init-fn bug.main/init}}
+        :output-dir "public/js"
+        :target :browser}}
+ :dependencies [[reagent "0.9.1"
+                 :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]]
+                [org.clojure/core.async "0.7.559"]]
+ :dev-http {3000 "public"}
+ :source-paths ["src"]}
